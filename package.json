@@ -1,13 +1,18 @@
 {
   "name": "blood-relation",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.4",
   "type": "module",
-  "author": "mr_zwh",
+  "author": "893653756@qq.com",
+  "license": "MIT",
   "description": "基于 @antv@g6 实现的血缘关系图",
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/893653756/blood-relation"
+  },
   "keywords": [
     "blood",
     "relation",
