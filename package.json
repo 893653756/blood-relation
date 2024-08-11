@@ -1,0 +1,33 @@
+{
+  "name": "blood-relation",
+  "private": false,
+  "version": "0.0.2",
+  "type": "module",
+  "author": "mr_zwh",
+  "description": "基于 @antv@g6 实现的血缘关系图",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "blood",
+    "relation",
+    "graph",
+    "blood-relation",
+    "血缘关系"
+  ],
+  "module": "./dist/blood-relation.js",
+  "exports": {
+    "import": "./dist/blood-relation.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@antv/g6": "^4.8.21",
+    "merge": "^2.1.1"
+  },
+  "devDependencies": {
+    "vite": "^5.2.10"
+  }
+}

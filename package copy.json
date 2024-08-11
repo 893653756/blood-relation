@@ -1,0 +1,25 @@
+{
+  "name": "blood-relation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "module": "./lib/main.js",
+  "exports": {
+    "import": "./dist/blood-relation.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@antv/g6": "^4.8.21",
+    "merge": "^2.1.1"
+  },
+  "devDependencies": {
+    "vite": "^5.2.10"
+  }
+}
