@@ -1,7 +1,7 @@
 {
   "name": "blood-relation",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.6",
   "type": "module",
   "author": "893653756@qq.com",
   "license": "MIT",
@@ -20,9 +20,9 @@
     "blood-relation",
     "血缘关系"
   ],
-  "module": "./dist/blood-relation.js",
+  "module": "./dist/index.js",
   "exports": {
-    "import": "./dist/blood-relation.js"
+    "import": "./dist/index.js"
   },
   "scripts": {
     "dev": "vite",

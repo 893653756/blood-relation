@@ -3,9 +3,9 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   build: {
     lib: {
-      entry: './lib/main.js',
+      entry: './lib/index.js',
       name: 'BloodRelation',
-      fileName: 'blood-relation',
+      fileName: 'index',
       formats: ['es']
     },
     rollupOptions: {
