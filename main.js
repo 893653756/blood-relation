@@ -1,6 +1,7 @@
 import "./style.css";
 
 import { initGraph } from "./dist/index";
+// import { initGraph } from "./lib/index";
 
 const graph = initGraph("app");
 
@@ -12,7 +13,8 @@ graph.setOptions({
     nodes: [
       {
         id: "info",
-        label: "info",
+        key: "table_1",
+        label: "表一",
         nodeCfg: {
           color: "#4CAF50",
         },
@@ -24,37 +26,30 @@ graph.setOptions({
         fields: [
           {
             key: "id",
+            label: "ID1",
             type: "number(6)",
           },
           {
             key: "key",
+            label: "KEY1",
             type: "varchar(255)",
           },
           {
             key: "gender",
+            label: "GENDER1",
             type: "enum(M, F)",
           },
           {
             key: "birthday",
             type: "date",
-          },
-          {
-            key: "hometown",
-            type: "varchar(255)",
-          },
-          {
-            key: "country",
-            type: "varchar(255)",
-          },
-          {
-            key: "xxxxx",
-            type: "varchar(255)",
+            label: "birthday_1",
           },
         ],
       },
       {
         id: "job",
-        label: "Job",
+        key: "table-2",
+        label: "表2",
         nodeCfg: {
           width: 180, // 节点宽度
           itemCount: 9, // 出现滚动条的阈值
@@ -75,6 +70,7 @@ graph.setOptions({
           {
             key: "id",
             type: "number(3)",
+            label: "中id",
             itemStyle: {
               bgColor: "rgba(255,0,0,0.4)",
               color: "#f0f",
@@ -82,6 +78,7 @@ graph.setOptions({
           },
           {
             key: "title",
+            label: "中title",
             type: "varchar(255)",
             itemStyle: {
               lineWidth: 1,
@@ -89,13 +86,15 @@ graph.setOptions({
           },
           {
             key: "level",
+            label: "中level",
             type: "number(3)",
           },
         ],
       },
       {
         id: "dept",
-        label: "dept",
+        key: "table_3",
+        label: "表三",
         nodeCfg: {
           color: "pink", // 节点主色调
           radius: 4, // 圆角
@@ -106,22 +105,27 @@ graph.setOptions({
         fields: [
           {
             key: "id",
+            label: "中_id",
             type: "number(6)",
           },
           {
             key: "title",
+            label: "中_title",
             type: "varchar(255)",
           },
           {
             key: "desc",
+            label: "中_desc",
             type: "text",
           },
           {
             key: "parent",
+            label: "中_parent",
             type: "number(6)",
           },
           {
             key: "manager",
+            label: "中_manager",
             type: "number(6)",
           },
         ],
@@ -141,7 +145,7 @@ graph.setOptions({
       },
       {
         source: "info",
-        sourceKey: "jobId",
+        sourceKey: "birthday",
         target: "job",
         targetKey: "title",
       },
@@ -163,3 +167,7 @@ graph.setOptions({
     ],
   },
 });
+
+setTimeout(() => {
+  graph.changeTextField("label");
+}, 3000);

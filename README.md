@@ -1,11 +1,13 @@
 ### 先上效果
-<img src='https://github.com/893653756/blood-relation/blob/master/img_02.png' height=200 alt='' />
 
+<img src='https://github.com/893653756/blood-relation/blob/master/img_02.png' alt='' />
 
 ### 使用
+
 ```js
 import { initGraph } from "blood-relation";
 
+// 节点 或者 组件 挂载之后
 const graph = initGraph(dom);
 
 graph.setOptions({
@@ -191,15 +193,16 @@ graph.setOptions({
 ## 连线样式
 
 ```js
+// 默认配置
 export const edgeCfg = {
   lineWidth: 1, // 线宽
   color: "#5B8FF9", // 颜色
   lineDash: [0, 0], // 虚线配置   [0, 0] 表示实线
   // 连线 path函数
   path: (startPoint, endPoint) => {
-    // startPoint.x 起点 y 坐标
+    // startPoint.x 起点 x 坐标
     // startPoint.y 起点 y 坐标
-    // endPoint.x 终点 y 坐标
+    // endPoint.x 终点 x 坐标
     // endPoint.y 终点 y 坐标
     return [
       // 直线
@@ -216,6 +219,7 @@ export const edgeCfg = {
         // 控制点2
         endPoint.x / 3 + (2 / 3) * startPoint.x,
         endPoint.y,
+        // 终点
         endPoint.x,
         endPoint.y,
       ],
@@ -240,7 +244,8 @@ graph.setOptions({
         sourceKey: "title", // 原表字段
         target: "b", // 目标表
         targetKey: "name", // 目标表字段
-          edgeCfg: {
+        // 私有配置
+        edgeCfg: {
           color: 'red',
           ...
         }
