@@ -5,7 +5,7 @@
   "type": "module",
   "author": "893653756@qq.com",
   "license": "MIT",
-  "description": "基于 @antv@g6 实现的血缘关系图",
+  "description": "基于 @antv@g6 实现的数据血缘关系图",
   "files": [
     "dist"
   ],

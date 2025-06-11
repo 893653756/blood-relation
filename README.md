@@ -60,6 +60,9 @@ const nodeCfg = {
   borderWidth: 2, // 主体边框宽度
   color: "#4273f6", // 节点主色调
   radius: 4, // 圆角
+  isPagination: false, // 是否分页 (当字段较多时，可以开启, 开启分页后 pageSize 将覆盖 itemCount 的值，不会出现滚动条)
+  pageSize: 10, // 分页条数
+  page: 1,
 };
 
 // 全局配置

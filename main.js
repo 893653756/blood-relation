@@ -2,7 +2,7 @@ import "./style.css";
 
 import { initGraph } from "./dist/index";
 // import { initGraph } from "./lib/index";
-
+console.log(initGraph);
 const graph = initGraph("app");
 
 graph.setOptions({
@@ -12,6 +12,7 @@ graph.setOptions({
   data: {
     nodes: [
       {
+        collapsed: true,
         id: "info",
         key: "table_1",
         label: "表一",
@@ -41,6 +42,41 @@ graph.setOptions({
           },
           {
             key: "birthday",
+            type: "date",
+            label: "birthday_1",
+          },
+          {
+            key: "birthday1",
+            type: "date",
+            label: "birthday_1",
+          },
+          {
+            key: "birthday2",
+            type: "date",
+            label: "birthday_1",
+          },
+          {
+            key: "birthday3",
+            type: "date",
+            label: "birthday_1",
+          },
+          {
+            key: "birthday4",
+            type: "date",
+            label: "birthday_1",
+          },
+          {
+            key: "birthday5",
+            type: "date",
+            label: "birthday_1",
+          },
+          {
+            key: "birthday6",
+            type: "date",
+            label: "birthday_1",
+          },
+          {
+            key: "birthday7",
             type: "date",
             label: "birthday_1",
           },
@@ -168,6 +204,6 @@ graph.setOptions({
   },
 });
 
-setTimeout(() => {
-  graph.changeTextField("label");
-}, 3000);
+// setTimeout(() => {
+//   graph.changeTextField("label");
+// }, 3000);
