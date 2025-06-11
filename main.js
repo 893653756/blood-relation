@@ -1,8 +1,8 @@
 import "./style.css";
 
-import { initGraph } from "./dist/index";
-// import { initGraph } from "./lib/index";
-console.log(initGraph);
+// import { initGraph } from "./dist/index";
+import { initGraph } from "./lib/index";
+
 const graph = initGraph("app");
 
 graph.setOptions({
@@ -18,6 +18,7 @@ graph.setOptions({
         label: "表一",
         nodeCfg: {
           color: "#4CAF50",
+          // showTextField: "label",
         },
         headerTextStyle: {
           color: "#f00",
@@ -204,6 +205,6 @@ graph.setOptions({
   },
 });
 
-// setTimeout(() => {
-//   graph.changeTextField("label");
-// }, 3000);
+setTimeout(() => {
+  graph.changeTextField("label");
+}, 3000);
